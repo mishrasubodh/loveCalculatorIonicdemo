@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>byDob</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-card>
+    <img src="../../assets/images/firstromantic.jpg" />
+    <div class="card-title">
+      <ion-item color='secondary'>
+        <ion-input
+          placeholder="Enter yourName"
+          type="text"
+          [(ngModel)]="yourname"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item color='secondary'>
+        <ion-datetime
+          class="pr-6"
+          pickerFormat="D/M/YYYY"
+          placeholder="Enter Your Dath Of Birth"
+          [(ngModel)]="yourdob"
+        ></ion-datetime>
+        <span
+          ><img src="../../assets/images/calendar.png" class="cal-img"
+        /></span>
+      </ion-item>
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/images/scond.jpg" />
+    <div class="card-title">
+      <ion-item color='secondary'>
+        <ion-input
+          placeholder="YourCrush Date of birth "
+          type="text"
+          [(ngModel)]="yourCrushname"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item color='secondary'>
+        <ion-datetime
+          class="pr-6"
+          pickerFormat="D/M/YYYY"
+          placeholder="Enter yourName"
+          [(ngModel)]="yourCrushdob"
+        ></ion-datetime>
+        <span
+          ><img src="../../assets/images/calendar.png" class="cal-img"
+        /></span>
+      </ion-item>
+    </div>
+  </ion-card>
+
+  <div class="bntion">
+    <ion-button
+      class="trybtn"
+      color="danger"
+      [disabled]="!yourname||!yourdob||!yourCrushname||!yourCrushdob"
+      (click)="submmit(yourname,yourdob,yourCrushname,yourCrushdob)"
+      >Try Again</ion-button
+    >
+  </div>
+</ion-content>

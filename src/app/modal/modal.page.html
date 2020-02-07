@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar class="result-box">
+    <ion-title class="result">Result Of Love</ion-title>
+    <ion-icon class="closebtn" ios="ios-close-circle" md="md-close-circle" (click)="dismiss()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="mainContent">
+
+<ion-card style="height: 90vh;" *ngIf="this.more90">
+  <ion-card-header class="mainCard">
+    <ion-card-title ><div class="nameDiv"><h3 class="left">{{this.yname}}</h3><ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon><h3 class="right">{{this.cname}}</h3></div></ion-card-title>
+  <div class="bgimage">
+   <h2>{{this.lcount}} %</h2>
+  </div>
+  <div>
+<h5>Husband and wife relationships are like the relationship of Tom and Jerry. Though they are teasing and fighting, but can’t live without each other</h5>
+  </div>
+     <div class="bntion"><ion-button class="trybtn" color="danger" (click)="dismiss()">Try Again</ion-button></div>
+  </ion-card-header>
+ 
+</ion-card>
+<ion-card style="height: 90vh;" *ngIf="this.eqall50">
+  <ion-card-header class="mainCard">
+    <ion-card-title ><div class="nameDiv"><h3 class="left">{{this.yname}}</h3><ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon><h3 class="right">{{this.cname}}</h3></div></ion-card-title>
+  <div class="bg50image">
+   <h2>{{this.lcount}} %</h2>
+  </div>
+  <div>
+<h5>When you’re in love – true love – you will absolutely feel that this person completes you and makes you the happiest when you are together. Once you find this person, never let them go!</h5>
+  </div>
+    <div class="bntion"><ion-button class="trybtn" color="danger" (click)="dismiss()">Try Again</ion-button></div>
+  </ion-card-header>
+</ion-card>
+<ion-card style="height: 90vh;" *ngIf="this.equel30">
+  <ion-card-header class="mainCard">
+    <ion-card-title ><div class="nameDiv"><h3 class="left">{{this.yname}}</h3><ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon><h3 class="right">{{this.cname}}</h3></div></ion-card-title>
+  <div class="bgmore30image">
+   <h2>{{this.lcount}} %</h2>
+  </div>
+  <div>
+<h5>Friendship is born at that moment when one person says to another: ‘What! You too? I thought I was the only one</h5>
+  </div>
+    <div class="bntion"><ion-button class="trybtn" color="danger" (click)="dismiss()">Try Again</ion-button></div>
+    
+  </ion-card-header>
+</ion-card>
+<ion-card style="height: 90vh;" *ngIf="this.less30">
+  <ion-card-header class="mainCard">
+    <ion-card-title ><div class="nameDiv"><h3 class="left">{{this.yname}}</h3><ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon><h3 class="right">{{this.cname}}</h3></div></ion-card-title>
+  <div class="bgless30image">
+   <h2>{{this.lcount}} %</h2>
+  </div>
+  <div>
+<h5>Evolutionary scientists believe that romantic jealousy developed in men out of fear of being cuckolded and in women out of fear of being materially abandoned. However it happened, it sucks.</h5>
+  </div>
+  <div class="bntion"><ion-button class="trybtn" color="danger" (click)="dismiss()">Try Again</ion-button></div>
+ 
+  </ion-card-header>
+</ion-card>
+</ion-content>

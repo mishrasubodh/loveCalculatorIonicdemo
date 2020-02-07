@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>byphoto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-image no-scroll">
+				<ion-card style="height: 90vh;">
+        <ion-item>
+					<div class="avatar-upload">
+						<div class="avatar-edit">
+							<input type='file'accept=".png, .jpg, .jpeg" #fileInput1 (change)="uploadFile1($event)" />
+            </div>
+            <div class="avatar-preview" (click)="fileInput1.click()">
+              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
+              </div>
+            </div>
+          </div>
+          <div>
+        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourName'></ion-input>
+        <ion-input type="text" placeholder="Enter yourAge" [(ngModel)]='yourage'></ion-input>
+          </div>
+        
+</ion-item>
+
+				<ion-item>
+					<div class="avatar-upload">
+						<div class="avatar-edit">
+							<input type='file' id="imageUpload2" accept=".png, .jpg, .jpeg" #fileInput2 (change)="uploadFile2($event)" />
+            </div>
+            <div class="avatar-preview" (click)="fileInput2.click()">
+              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl1 +')'">
+              </div>
+            </div>
+          </div>
+          <div>
+        <ion-input type="text" placeholder="Enter yourAge" [(ngModel)]="yourcrush"></ion-input>
+         <ion-input type="number" placeholder="Enter crushage" [(ngModel)]="crushage"></ion-input>
+          </div>
+        
+</ion-item>
+         
+ <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Try Again</ion-button></div>
+</ion-card>
+</ion-content>

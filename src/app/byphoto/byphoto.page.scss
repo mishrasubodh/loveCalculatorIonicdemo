@@ -1,0 +1,21 @@
+ .bg-image {
+   --background:url('../../assets/images/dil.jpg') no-repeat center center fixed;
+   --background-size: cover;
+   --overflow: hidden;
+ }
+ .no-scroll .scroll-content {
+   overflow: hidden;
+ }
+
+ .bntion{
+text-align: center;
+    padding-top: 22px;
+}
+.trybtn{
+ --width: 51px;
+    --height: 60px;
+    --border-radius: 42%;
+    --vertical-align: middle;
+    --padding-start: 29px;
+    --padding-end: 29px;
+}

@@ -1,0 +1,48 @@
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+ 
+
+}
+
+.bntion{
+text-align: center;
+    padding-top: 22px;
+}
+.trybtn{
+ --width: 51px;
+    --height: 60px;
+    --border-radius: 42%;
+    --vertical-align: middle;
+    --padding-start: 29px;
+    --padding-end: 29px;
+}
+.cal-img{
+     width: 26px;
+     position: relative;
+     top: -3px;
+     left: -1px;
+}
+.pr-6{
+     padding-right: 6px;
+}

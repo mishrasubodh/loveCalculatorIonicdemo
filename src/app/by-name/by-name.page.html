@@ -1,0 +1,43 @@
+<ion-header>
+  
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="lovetitle">
+      Love Calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card class="maincard">
+  <ion-card-header>
+    <ion-card-title>Welcome to this great invention of Love Calculator!</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart. Life without love is like a tree without blossoms or fruit. The best thing to hold onto in life is each other. 'Tis better to have loved and lost than never to have loved at all
+  </ion-card-content>
+ 
+<form name="lf" class="form"  #form="ngForm" (ngSubmit)="subbmit(form)">
+        <div>
+          <div class="form-group">
+            <label for="name1">Your name</label>
+            <input class="inputclass" type="text" name="name1" id="name1" ngModel value="" size="25"placeholder="Full name" required="">
+          </div>
+          <div class="form-group">
+            <label for="name2">Your crush</label>
+            <input class="inputclass" type="text" name="name2" id="name2" ngModel value="" size="25"placeholder="Full name" required="">
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: center; margin-top: 1rem;">
+            <button class="btn btn--primary" type="submit" [disabled]="form.invalid" >Calculate love</button>
+          </div>
+        </div>
+       <img class="form__image" src="https://www.lovecalculator.com/dist/images/lovecalculator-heart.svg" alt="LOVES">
+      </form>
+</ion-card>
+
+
+

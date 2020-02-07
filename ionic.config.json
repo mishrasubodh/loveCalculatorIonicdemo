@@ -1,5 +1,7 @@
 {
   "name": "love Calculator",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
