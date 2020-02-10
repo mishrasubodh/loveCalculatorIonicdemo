@@ -17,6 +17,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'SMS',
+      url: '/message',
+      icon: 'md-mail-open'
+    },
+    {
       title: 'List',
       url: '/list',
       icon: 'list'
@@ -24,7 +29,7 @@ export class AppComponent {
     {
       title: 'History',
       url: '/history',
-      icon: 'History'
+      icon: 'map'
     }
   ];
 

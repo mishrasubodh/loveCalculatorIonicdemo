@@ -103,4 +103,8 @@
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="your usage message" />
     </plugin>
     <plugin name="com-badrit-base64" spec="^0.2.0" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.6.3" />
+    <plugin name="cordova-plugin-file" spec="^6.0.2" />
+    <allow-navigation href="http://localhost:8101" sessionid="36b0ae5b" />
+    <engine name="android" spec="7.1.4" />
 </widget>

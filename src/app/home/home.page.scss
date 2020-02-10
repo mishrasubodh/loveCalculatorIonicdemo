@@ -3,16 +3,30 @@
   overflow: hidden;
 }
 
-
+.toolbar-background{
+  --background-color: chocolate;
+   --font-style: oblique;
+    --font-family: cursive;
+}
 .sc-ion-card-md-h {
-  margin-left: unset;
-  margin-right: unset;
+  
   -webkit-margin-start: 10px;
   margin-inline-start: 10px;
   -webkit-margin-end: 10px;
   margin-inline-end: 10px;
   background-color: pink;
-  padding: 0 0 45% 0 !important;
+  padding: 0 0 57% 0 !important;
   width: 94% !important;
   height: 0 !important;
 }
+.card-content-md h3{
+ font-size: 27px;
+    font-weight: 400;
+    margin-top: 97px;
+    margin-left: 55px;
+    font-family: cursive;
+    color: red;
+
+}
+
+

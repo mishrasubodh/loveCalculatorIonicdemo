@@ -16,7 +16,8 @@ export class ModalPage implements OnInit {
   equel30: boolean = false;
   constructor(
   public NavCtrl: NavController,
-  public behaveService :SharedService
+  public behaveService :SharedService,
+  
   ) {
 this.behaveService.data.subscribe(data=>{
   console.log(data)
@@ -54,6 +55,21 @@ this.behaveService.data.subscribe(data=>{
 
 dismiss() {
    this.NavCtrl.back()
+  }
+  shair(){
+    this.NavCtrl.navigateRoot('/social-shair')
+//   this.socialSharing.canShareViaEmail().then(() => {
+//   // Sharing via email is possible
+// }).catch(() => {
+//   // Sharing via email is not possible
+// });
+
+// // Share via email
+// this.socialSharing.shareViaEmail('Body', 'Subject', ['recipient@example.org']).then(() => {
+//   // Success!
+// }).catch(() => {
+//   // Error!
+// });
   }
   ngOnInit() {
   }

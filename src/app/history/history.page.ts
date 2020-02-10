@@ -25,7 +25,7 @@ export class HistoryPage implements OnInit {
    }
   ngOnInit() {
   }
-       SaveDataToLocalStorage(data) { debugger
+       SaveDataToLocalStorage(data) {
 		    console.log(data)
 		   if(data.length!==0){
 			   var c = [];

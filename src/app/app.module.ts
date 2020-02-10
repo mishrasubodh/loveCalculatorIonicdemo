@@ -6,7 +6,10 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { FormsModule } from '@angular/forms';
+import {File} from '@ionic-native/file/ngx'
+import {SocialSharing} from '@ionic-native/social-sharing/ngx'
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -15,9 +18,13 @@ import { FormsModule } from '@angular/forms';
     IonicModule.forRoot(),
     AppRoutingModule,
     FormsModule,
+  
+    
     
   ],
   providers: [
+    SocialSharing,
+    File,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

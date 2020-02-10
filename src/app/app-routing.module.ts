@@ -33,6 +33,14 @@ const routes: Routes = [
   },  {
     path: 'history',
     loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'social-shair',
+    loadChildren: () => import('./social-shair/social-shair.module').then( m => m.SocialShairPageModule)
+  },
+  {
+    path: 'message',
+    loadChildren: () => import('./message/message.module').then( m => m.MessagePageModule)
   }
 
 ];
