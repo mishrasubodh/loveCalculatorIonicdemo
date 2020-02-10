@@ -74,6 +74,7 @@ export class ByNamePage {
       data['Fname']= this.Fname
        data['Sname']=this.Sname
         data['Total']= this.loveTotal
+        data['from']='calculate through name';
         this.behaveService.updatedDataSelection(data)
          setTimeout(()=>{
            form.reset();

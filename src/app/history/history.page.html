@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>history</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-list>
+    <ion-item *ngFor="let item of historydata let i = index">
+      <div >
+      
+        {{item.Fname}}
+      
+      {{item.Total}}
+      
+        {{item.Sname}}
+      
+        <span (click)="deletedata(i)">
+        <ion-icon ios="ios-trash" md="md-trash" ></ion-icon>
+      </span>
+    </div>
+     <div >
+      <h5>{{item.from}}</h5>
+     </div>
+
+     
+    </ion-item>
+  </ion-list>
+</ion-card>
+</ion-content>

@@ -98,6 +98,7 @@ export class ByDobPage implements OnInit {
     data["Fname"] = this.Fname;
     data["Sname"] = this.Sname;
     data["Total"] = this.grandTotal;
+    data['from']='calculate through name and date of Birth';
     this.behaveService.updatedDataSelection(data);
     setTimeout(() => {
 
