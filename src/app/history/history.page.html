@@ -3,32 +3,31 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>history</ion-title>
+    <ion-title>HISTORY</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<ion-card>
-  <ion-list>
-    <ion-item *ngFor="let item of historydata let i = index">
-      <div >
-      
-        {{item.Fname}}
-      
-      {{item.Total}}
-      
-        {{item.Sname}}
-      
-        <span (click)="deletedata(i)">
-        <ion-icon ios="ios-trash" md="md-trash" ></ion-icon>
-      </span>
-    </div>
-     <div >
-      <h5>{{item.from}}</h5>
-     </div>
+  <ion-card>
+    <ion-list *ngFor="let item of historydata let i = index">
+      <ion-item>
+        <div class="aligndiv">
+        <div>
+          {{item.Fname}}
+        </div>
+        <div> {{item.Total}} %
+          <ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon>
+        </div>
+        <div> {{item.Sname}}</div>
+        <div>
+          <ion-icon ios="ios-trash" md="md-trash" (click)="deletedata(i)"></ion-icon>
+        </div>
+        </div>
+        
 
-     
-    </ion-item>
-  </ion-list>
-</ion-card>
+        <div>{{item.from}}</div>
+
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>

@@ -4,9 +4,14 @@
 }
 
 .toolbar-background{
-  --background-color: chocolate;
-   --font-style: oblique;
+   --background:pink;
+    text-align: center;
+    padding-right: 10%;
+    font-style: oblique;
+    color: #ff0000;
+    font-family: fantasy;
     --font-family: cursive;
+    --font-weight: 1000;
 }
 .sc-ion-card-md-h {
   
@@ -22,11 +27,22 @@
 .card-content-md h3{
  font-size: 27px;
     font-weight: 400;
-    margin-top: 97px;
+    margin-top: 61px;
     margin-left: 55px;
     font-family: cursive;
     color: red;
 
 }
-
+ion-header {
+  // ion-toolbar {
+  //   --background:pink;
+  //   text-align: center;
+  //   padding-right: 10%;
+  //   font-style: oblique;
+  //   color: #350404;;
+  //   font-family: fantasy;
+  //    font-family: cursive;
+  //    font-weight:bolder ;
+  // }
+}
 

@@ -1,0 +1,32 @@
+ion-header {
+  ion-toolbar {
+    --background: pink;
+    text-align: center;
+    padding-right: 10%;
+    padding-left: 0px;
+    font-style: oblique;
+    color: #ff0000;
+    font-family: fantasy;
+    --font-family: cursive;
+    --font-weight: 1000;
+  }
+}
+
+ion-content {
+  ion-list {
+   // --background: #ea768b;
+     background-color: transparent;
+  }
+  ion-item {
+    --background: #ea768b;
+    border-radius: 10px;
+    border: ridge;
+    color: #fff1f1;
+  }
+  ion-icon {
+    color: #1ee464;
+    position: absolute;
+    right: 5px;
+    top: 14px;
+  }
+}

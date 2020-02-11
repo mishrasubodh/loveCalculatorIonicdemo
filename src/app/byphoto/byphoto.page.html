@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>byphoto</ion-title>
+    <ion-title>CALCULATE LOVE By PHOTO</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,10 +11,11 @@
 				<ion-card style="height: 90vh;">
         <ion-item>
 					<div class="avatar-upload">
-						<div class="avatar-edit">
-							<input type='file'accept=".png, .jpg, .jpeg" #fileInput1 (change)="uploadFile1($event)" />
-            </div>
-            <div class="avatar-preview" (click)="fileInput1.click()">
+
+            <div class="avatar-preview">
+              <div class="avatar-edit">
+                <input type='file'accept=".png, .jpg, .jpeg" #fileInput1 (change)="uploadFile1($event)" />
+              </div>
               <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
               </div>
             </div>
@@ -42,7 +43,6 @@
           </div>
         
 </ion-item>
-         
  <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Try Again</ion-button></div>
 </ion-card>
 </ion-content>

@@ -39,6 +39,7 @@ difcount:any;
   editFile: boolean = true;
   removeUpload: boolean = false;
   uploadFile1(event) {
+    console.log(event)
     let reader = new FileReader(); 
     let file = event.target.files[0];
     if (event.target.files && event.target.files[0]) {
@@ -53,6 +54,7 @@ difcount:any;
       this.cd.markForCheck();        
     }
   }
+
 uploadFile2(event) {
     let reader = new FileReader(); 
     let file = event.target.files[0];
