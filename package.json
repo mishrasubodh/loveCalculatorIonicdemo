@@ -78,7 +78,9 @@
         "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message"
       },
       "com-badrit-base64": {},
-      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      },
       "cordova-plugin-file": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
