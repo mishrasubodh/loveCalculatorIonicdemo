@@ -7,7 +7,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="bg-image no-scroll">
+<!-- <ion-content class="bg-image no-scroll">
+
 				<ion-card style="height: 90vh;">
         <ion-item>
 					<div class="avatar-upload">
@@ -21,7 +22,7 @@
             </div>
           </div>
           <div>
-        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourName'></ion-input>
+        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourname'></ion-input>
         <ion-input type="text" placeholder="Enter yourAge" [(ngModel)]='yourage'></ion-input>
           </div>
         
@@ -43,6 +44,21 @@
           </div>
         
 </ion-item>
- <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Try Again</ion-button></div>
+ <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Calculate Love</ion-button></div>
 </ion-card>
+</ion-content> -->
+
+
+<ion-content padding>
+  <ion-item>
+    <p>{{imageURI}}</p>
+    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+  </ion-item>
+  <ion-item>
+    <h4>Image Preview</h4>
+    <img [src]="base64Data | safe:'url'"  alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Upload</button>
+  </ion-item>
 </ion-content>

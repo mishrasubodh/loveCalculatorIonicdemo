@@ -6,10 +6,11 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 import { FormsModule } from '@angular/forms';
-import {File} from '@ionic-native/file/ngx'
 import {SocialSharing} from '@ionic-native/social-sharing/ngx'
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,7 +25,9 @@ import {SocialSharing} from '@ionic-native/social-sharing/ngx'
   ],
   providers: [
     SocialSharing,
-    File,
+     File,
+  
+     Camera,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

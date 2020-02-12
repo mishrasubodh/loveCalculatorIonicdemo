@@ -11,14 +11,18 @@
 text-align: center;
     padding-top: 22px;
 }
-.trybtn{
- --width: 51px;
-    --height: 60px;
-    --border-radius: 42%;
-    --vertical-align: middle;
-    --padding-start: 29px;
-    --padding-end: 29px;
+
+ .trybtn {
+  --width: 51px;
+  --height: 60px;
+  --border-radius: 20%;
+  --vertical-align: middle;
+  --padding-start: 29px;
+  --padding-end: 29px;
+    --min-height: 61px;
+    --min-width: 215px;
 }
+
 
 ion-header {
   ion-toolbar {

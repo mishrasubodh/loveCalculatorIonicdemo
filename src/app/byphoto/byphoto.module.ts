@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { ByphotoPageRoutingModule } from './byphoto-routing.module';
 
 import { ByphotoPage } from './byphoto.page';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { ByphotoPage } from './byphoto.page';
     ByphotoPageRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [ByphotoPage]
+  declarations: [ByphotoPage,SafePipe]
 })
 export class ByphotoPageModule {}

@@ -1,7 +1,10 @@
 import { Component, ChangeDetectorRef, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormArray, Validators } from "@angular/forms";
-import { NavController } from '@ionic/angular';
+import { NavController,LoadingController, ToastController  } from '@ionic/angular';
 import {SharedService}from '../services/shared.service'
+//import { NavController, LoadingController, ToastController } from 'ionic-angular';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 @Component({
   selector: 'app-byphoto',
   templateUrl: './byphoto.page.html',
@@ -9,6 +12,10 @@ import {SharedService}from '../services/shared.service'
 })
 
 export class ByphotoPage  {
+  imageURI:any;
+imageFileName:any;
+
+
   grandTotal:any
   Fname: any;
   FnameLength: any;
@@ -25,11 +32,17 @@ scondurl:any;
 yourage:any;
 crushage:any;
 difcount:any;
+  base64Data: any;
+  converted_image: string;
   constructor(
     public fb: FormBuilder,
     private cd: ChangeDetectorRef,
     public nav: NavController,
     public behaveService: SharedService,
+      // private transfer: FileTransfer,
+   private camera: Camera,
+    public loadingCtrl: LoadingController,
+  public toastCtrl: ToastController
   ) {}
 
   /*########################## File Upload ########################*/
@@ -38,6 +51,31 @@ difcount:any;
    imageUrl1: any = 'https://i.pinimg.com/236x/d6/27/d9/d627d9cda385317de4812a4f7bd922e9--man--iron-man.jpg';
   editFile: boolean = true;
   removeUpload: boolean = false;
+
+
+
+
+
+
+  getImage() { 
+  const options: CameraOptions = {
+    quality: 100,
+    destinationType: this.camera.DestinationType.FILE_URI,
+    sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+  }
+  this.camera.getPicture(options).then((imageData) => {
+  this.base64Data = imageData;
+  var reader = new FileReader();
+  reader.onloadend = function() {
+    console.log('RESULT', reader.result)
+  }
+  reader.readAsDataURL(imageData);
+  console.log(reader.readAsDataURL(imageData),"this.base64Data")
+  }, (err) => {
+    console.log(err);
+    
+  });
+}
   uploadFile1(event) {
     console.log(event)
     let reader = new FileReader(); 
@@ -46,7 +84,7 @@ difcount:any;
       reader.readAsDataURL(file);
       reader.onload = () => {
         this.imageUrl = reader.result;
-        console.log( this.imageUrl," this.imageUrl")
+        console.log( this.imageUrl.toDataURL()," this.imageUrl")
         this.editFile = false;
         this.removeUpload = true;
       }
@@ -54,6 +92,39 @@ difcount:any;
       this.cd.markForCheck();        
     }
   }
+
+// uploadFile() {
+//   let loader = this.loadingCtrl.create({
+//     // content: "Uploading..."
+//   });
+//   // loader.present();
+//   // const fileTransfer: FileTransferObject = this.transfer.create();
+
+//   let options: FileUploadOptions = {
+//     fileKey: 'ionicfile',
+//     fileName: 'ionicfile',
+//     chunkedMode: false,
+//     mimeType: "image/jpeg",
+//     headers: {}
+//   }
+
+//   fileTransfer.upload(this.imageURI, 'http://192.168.0.7:8080/api/uploadImage', options)
+//     .then((data) => {
+//     console.log(data+" Uploaded Successfully");
+//     this.imageFileName = "http://192.168.0.7:8080/static/images/ionicfile.jpg"
+//     // loader.dismiss();
+//     //this.presentToast("Image uploaded successfully");
+//   }, (err) => {
+//     console.log(err);
+//     // loader.dismiss();
+//     //this.presentToast(err);
+//   });
+// }
+
+
+
+
+
 
 uploadFile2(event) {
     let reader = new FileReader(); 
@@ -69,7 +140,7 @@ uploadFile2(event) {
       this.cd.markForCheck();        
     }
   }
- 
+
 subbmitData(yourname,yourage,yourcrush,yourcrushage){
 this.difcount=0;
 console.log(yourname,yourage,yourcrush,yourcrushage)
@@ -133,7 +204,7 @@ if (Total > 99) Total = 99;
   data['Fname']= this.Fname
    data['Sname']=this.Sname
     data['Total']= this.grandTotal
-    data['from']='calculate through photo name and age';
+    data['from']='by photo and age';
      this.behaveService.updatedDataSelection(data)
       setTimeout(()=>{
       
