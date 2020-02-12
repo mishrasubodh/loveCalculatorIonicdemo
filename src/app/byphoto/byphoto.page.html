@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content class="bg-image no-scroll">
+<ion-content class="bg-image no-scroll">
 
 				<ion-card style="height: 90vh;">
         <ion-item>
@@ -15,7 +15,7 @@
 
             <div class="avatar-preview">
               <div class="avatar-edit">
-                <input type='file'accept=".png, .jpg, .jpeg" #fileInput1 (change)="uploadFile1($event)" />
+                <input type='file' name="file1" (change)="uploadFile1($event)" />
               </div>
               <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
               </div>
@@ -30,11 +30,11 @@
 
 				<ion-item>
 					<div class="avatar-upload">
+            <div class="avatar-preview">
 						<div class="avatar-edit">
-							<input type='file' id="imageUpload2" accept=".png, .jpg, .jpeg" #fileInput2 (change)="uploadFile2($event)" />
+							<input type='file' name="file2" (change)="uploadFile1($event)" />
             </div>
-            <div class="avatar-preview" (click)="fileInput2.click()">
-              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl1 +')'">
+              <div id="imagePreview2" [style.backgroundImage]="'url('+ imageUrl1 +')'">
               </div>
             </div>
           </div>
@@ -46,19 +46,20 @@
 </ion-item>
  <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Calculate Love</ion-button></div>
 </ion-card>
-</ion-content> -->
+</ion-content>
 
 
-<ion-content padding>
+<!-- <ion-content padding>
   <ion-item>
     <p>{{imageURI}}</p>
-    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+    <input type="file" name="file" ion-button color="secondary" (change)="uploadFile1($event)">Get Image
   </ion-item>
   <ion-item>
     <h4>Image Preview</h4>
+    <br/>
     <img [src]="base64Data | safe:'url'"  alt="Ionic File" width="300" />
   </ion-item>
   <ion-item>
     <button ion-button (click)="uploadFile()">Upload</button>
   </ion-item>
-</ion-content>
+</ion-content> -->

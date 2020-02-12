@@ -65,31 +65,25 @@ difcount:any;
   }
   this.camera.getPicture(options).then((imageData) => {
   this.base64Data = imageData;
-  var reader = new FileReader();
-  reader.onloadend = function() {
-    console.log('RESULT', reader.result)
-  }
-  reader.readAsDataURL(imageData);
-  console.log(reader.readAsDataURL(imageData),"this.base64Data")
+  console.log(imageData, 'image data')
   }, (err) => {
     console.log(err);
     
   });
 }
   uploadFile1(event) {
-    console.log(event)
     let reader = new FileReader(); 
     let file = event.target.files[0];
     if (event.target.files && event.target.files[0]) {
       reader.readAsDataURL(file);
       reader.onload = () => {
-        this.imageUrl = reader.result;
-        console.log( this.imageUrl.toDataURL()," this.imageUrl")
-        this.editFile = false;
-        this.removeUpload = true;
+        event.target.name == 'file1' ? this.imageUrl = reader.result : this.imageUrl1 = reader.result
+        // this.editFile = false;
+        // this.removeUpload = true;
       }
-      
-      this.cd.markForCheck();        
+      if(this.imageUrl && this.imageUrl1) {
+        console.log('hello')
+      }
     }
   }
 
