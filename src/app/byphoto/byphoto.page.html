@@ -8,32 +8,35 @@
 </ion-header>
 
 <ion-content class="bg-image no-scroll">
+
 				<ion-card style="height: 90vh;">
         <ion-item>
 					<div class="avatar-upload">
 
             <div class="avatar-preview">
               <div class="avatar-edit">
-                <input type='file'accept=".png, .jpg, .jpeg" #fileInput1 (change)="uploadFile1($event)" />
+                <input type='file' name="file1" (change)="uploadFile1($event)" />
               </div>
-              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'">
+              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'" aria-placeholder="please select image">
+                <span *ngIf="!imageUrl"><h3>select photo</h3> </span>  
               </div>
             </div>
           </div>
           <div>
-        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourName'></ion-input>
-        <ion-input type="text" placeholder="Enter yourAge" [(ngModel)]='yourage'></ion-input>
+        <ion-input type="text" placeholder="Enter yourName" [(ngModel)]='yourname'></ion-input>
+        <ion-input type="number" placeholder="Enter yourAge" [(ngModel)]='yourage'></ion-input>
           </div>
         
 </ion-item>
 
 				<ion-item>
 					<div class="avatar-upload">
+            <div class="avatar-preview">
 						<div class="avatar-edit">
-							<input type='file' id="imageUpload2" accept=".png, .jpg, .jpeg" #fileInput2 (change)="uploadFile2($event)" />
+							<input type='file' name="file2" (change)="uploadFile1($event)" />
             </div>
-            <div class="avatar-preview" (click)="fileInput2.click()">
-              <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl1 +')'">
+              <div id="imagePreview2" [style.backgroundImage]="'url('+ imageUrl1 +')'">
+              <span *ngIf="!imageUrl1"><h3>select photo</h3> </span> 
               </div>
             </div>
           </div>
@@ -43,6 +46,22 @@
           </div>
         
 </ion-item>
- <div class="bntion"><ion-button class="trybtn" color="danger" (click)="subbmitData(yourName,yourage,yourcrush,crushage);">Try Again</ion-button></div>
+ <div class="bntion"><ion-button class="trybtn" color="danger"[disabled]="!yourname||!yourage||!imageUrl||!yourcrush||!crushage||!imageUrl1" (click)="subbmitData(yourname,yourage,imageUrl,yourcrush,crushage,imageUrl1);">Calculate Love</ion-button></div>
 </ion-card>
 </ion-content>
+
+
+<!-- <ion-content padding>
+  <ion-item>
+    <p>{{imageURI}}</p>
+    <input type="file" name="file" ion-button color="secondary" (change)="uploadFile1($event)">Get Image
+  </ion-item>
+  <ion-item>
+    <h4>Image Preview</h4>
+    <br/>
+    <img [src]="base64Data | safe:'url'"  alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Upload</button>
+  </ion-item>
+</ion-content> -->

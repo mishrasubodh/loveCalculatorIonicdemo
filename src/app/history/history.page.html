@@ -12,20 +12,16 @@
     <ion-list *ngFor="let item of historydata let i = index">
       <ion-item>
         <div class="aligndiv">
-        <div>
+        <div class="subdiv">
           {{item.Fname}}
         </div>
-        <div> {{item.Total}} %
-          <ion-icon ios="ios-heart" md="md-heart" class="icons"></ion-icon>
-        </div>
-        <div> {{item.Sname}}</div>
-        <div>
-          <ion-icon ios="ios-trash" md="md-trash" (click)="deletedata(i)"></ion-icon>
+        <div class="subdiv1"> {{item.Total}} %</div>
+        <div class="subdiv"> {{item.Sname}}</div>
+        <div class="subdiv2" (click)="deletedata(i)">
+          <ion-icon ios="ios-trash" md="md-trash" ></ion-icon>
         </div>
         </div>
-        
-
-        <div>{{item.from}}</div>
+        <div class="subdiv3" text-wrap>{{item.from}}</div>
 
       </ion-item>
     </ion-list>

@@ -12,3 +12,52 @@ ion-header {
     --font-weight: 1000;
   }
 }
+
+ion-item{
+      font-style: oblique;
+    font-family: cursive;
+    font-weight: 1000;
+.aligndiv{
+  width: 100%;
+    min-width: 0px;
+    display: flex;
+    
+}
+  .subdiv{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .subdiv1{
+    background-image: url('../../assets/images/otherimg.jpg');
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    color: red;
+    font-weight: bolder;
+  }
+  ion-icon{
+    color: darkmagenta;
+  }
+  .subdiv2{
+padding-left: 9%;
+padding-top: 6px;
+}
+.subdiv3{
+padding-left: 9%;
+padding-top: 6px;
+}
+}
+.sc-ion-card-md-s ion-list {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background: transparent;
+    border-radius: 50px;
+    border-style: groove;
+    background-color: red;
+    
+}
+

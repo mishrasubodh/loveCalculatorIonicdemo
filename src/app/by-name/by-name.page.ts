@@ -12,6 +12,8 @@ export class ByNamePage {
  Fname: any;
   FnameLength: any;
   Sname: any;
+  yourname;
+  yourcrush;
   SnameLength: any;
   Total: any;
   txtresult: any;
@@ -23,11 +25,11 @@ export class ByNamePage {
 
  
    }
-  async subbmit(form) {
-    //console.log('form', form.value)
-    this.Fname = form.value.name1.toUpperCase();
+  async subbmit(yname,cname) {
+    console.log('form', yname,cname)
+    this.Fname = yname.toUpperCase();
     this.FnameLength = this.Fname.length;
-    this.Sname = form.value.name2.toUpperCase();
+    this.Sname = cname.toUpperCase();
     this.SnameLength = this.Sname.length;
     var lovecount = 0;
     for (var i = 0; i < this.FnameLength; i++) {
@@ -74,11 +76,12 @@ export class ByNamePage {
       data['Fname']= this.Fname
        data['Sname']=this.Sname
         data['Total']= this.loveTotal
-        data['from']='calculate through name';
+        data['from']='by name';
         this.behaveService.updatedDataSelection(data)
-         setTimeout(()=>{
-           form.reset();
-          },1000)
+        //  setTimeout(()=>{
+        //    form.reset();
+        //   },500)
+       
        this.nav.navigateRoot('/modal');
   }
        

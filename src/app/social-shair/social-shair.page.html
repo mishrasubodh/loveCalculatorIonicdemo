@@ -8,9 +8,13 @@
 </ion-header>
 
 <ion-content>
-<ion-button color="primary" expand="full" (click)="ShareOnTwitter()">Share On Twitter</ion-button>
-<ion-button color="warning"expand="full" (click)="SharebyEmail()">Share by Email</ion-button>
-<ion-button color="secondary" expand="full" (click)="ShareOnFacebook()">Share On Facebook</ion-button>
-<ion-button color="success" expand="full" (click)="SharewithWhatsApp()">Share with WhatsApp</ion-button>
+  <div (click)="ShareOnTwitter()"><ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon></div>
+
+<div (click)="SharebyEmail()"> <ion-icon ios="ios-mail" md="md-mail"></ion-icon></div>
+
+<div (click)="ShareOnFacebook()"><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></div>
+
+<div (click)="SharewithWhatsApp()"><ion-icon ios="logo-whatsapp" md="logo-whatsapp"></ion-icon></div>
+
 
 </ion-content>
