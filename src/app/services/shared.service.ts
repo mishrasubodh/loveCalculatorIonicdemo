@@ -6,11 +6,25 @@ import { BehaviorSubject } from 'rxjs';
 export class SharedService {
   private dataSource = new BehaviorSubject({});
   data = this.dataSource.asObservable();
-  constructor() { }
+
+  private screensortData = new BehaviorSubject([]);
+  screensort = this.screensortData.asObservable();
+
+  constructor() {
+
+
+    
+   }
+
   updatedDataSelection(data) {
     this.dataSource.next(data);
     this.SaveDataToLocalStorage(data)
   }
+
+ updateImageData(data) {
+    this.screensortData.next(data);
+  }
+
 
   SaveDataToLocalStorage(data) {
     var a = [];

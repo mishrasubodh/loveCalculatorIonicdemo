@@ -1,7 +1,8 @@
 {
   "name": "love Calculator",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

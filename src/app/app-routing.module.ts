@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'modal',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
-  },  {
+  },
+  {
     path: 'history',
     loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   },
