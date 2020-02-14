@@ -7,8 +7,7 @@ export class SharedService {
   private dataSource = new BehaviorSubject({});
   data = this.dataSource.asObservable();
 
-  private screensortData = new BehaviorSubject([]);
-  screensort = this.screensortData.asObservable();
+  screensortData = new BehaviorSubject(null);
 
   constructor() {
 
@@ -22,6 +21,7 @@ export class SharedService {
   }
 
  updateImageData(data) {
+   console.log(data);
     this.screensortData.next(data);
   }
 

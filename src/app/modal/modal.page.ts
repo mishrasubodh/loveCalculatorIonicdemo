@@ -71,37 +71,24 @@ dismiss() {
       self.state = false;
     }, 1000);
   }
+
    async shair(){ 
-	
-
-    this.screenshot.save().then(reso=>{ debugger
-  let path = JSON.parse(localStorage.getItem("dirPath"));
-   console.log("path",path);
-let filename= Date.now() +'loveCalc.png'
-  this.file.moveFile('/storage/emulated/0/Pictures', 'screenshot_1581610310149.png', path, filename).then((res) => {
- console.log("res",res);
-  });
-//    this.file.writeFile(path, filename,'').then((res) => {
-//         console.log('File has been downloaded. Please check your downloads folder.',res);
-//     }, (err) => {
-//         console.log("Sorry. An error occurred downloading the file: " + err);
-//     }
-// );
-
-//const saveData =  this.transfer.create().download(reso, path +  filename)
-//console.log(saveData,"")
-    // this.file.createFile(path,Date.now() +'loveCalc.png',true).then(responce=>{
-    //   console.log(responce,"res123");
-    // });
-
-      //this.screen = res.filePath;
-      //this.behaveService.updateImageData(this.screen)
-     // this.state = true;
-      //this.reset();
-      //this.NavCtrl.navigateRoot('/social-shair')
-    },error=>{
-      console.log(error)
-    }); 
+    try {
+      let savedScreenShot = await this.screenshot.save();
+      let screenshot = savedScreenShot.filePath.slice(savedScreenShot.filePath.indexOf('screenshot'), savedScreenShot.filePath.length);
+      let dir = await this.file.checkDir(this.file.externalRootDirectory, 'Pictures');
+      if(dir && screenshot) {
+        // let path = `${this.file.externalRootDirectory}/lovecalc`;
+        // let filename = `${Date.now()}${screenshot}`;
+        // let result = await this.file.moveFile(`${this.file.externalRootDirectory}/Pictures`, screenshot, path, filename)
+        this.behaveService.updateImageData(screenshot)
+        this.NavCtrl.navigateRoot('/social-shair')
+      } else {
+        throw new Error('Something went wrong')
+      }
+    } catch(e) {
+      console.log(e)
+    }
   }
 
   ngOnInit() {
