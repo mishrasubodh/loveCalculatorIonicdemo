@@ -6,13 +6,8 @@ import { BehaviorSubject } from 'rxjs';
 export class SharedService {
   private dataSource = new BehaviorSubject({});
   data = this.dataSource.asObservable();
-
   screensortData = new BehaviorSubject(null);
-
   constructor() {
-
-
-    
    }
 
   updatedDataSelection(data) {
@@ -21,8 +16,7 @@ export class SharedService {
   }
 
  updateImageData(data) {
-   console.log(data);
-    this.screensortData.next(data);
+  this.screensortData.next(data);
   }
 
 
@@ -32,9 +26,6 @@ export class SharedService {
     a.push(data);
     console.log('a', a)
     localStorage.setItem('session', JSON.stringify(a));
-
-
-
   }
 
 }

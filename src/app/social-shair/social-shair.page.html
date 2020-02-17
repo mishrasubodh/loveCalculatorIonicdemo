@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-     <ion-buttons slot="start">
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Share</ion-title>
@@ -8,16 +8,12 @@
 </ion-header>
 
 <ion-content>
-  <div (click)="ShareOnTwitter()"><ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon></div>
-
-<div (click)="SharebyEmail()"> <ion-icon ios="ios-mail" md="md-mail"></ion-icon></div>
-
-<div (click)="ShareOnFacebook()"><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></div>
-
-<div (click)="SharewithWhatsApp()"><ion-icon ios="logo-whatsapp" md="logo-whatsapp"></ion-icon></div>
-
-<ion-button color="warning" (click)="ShareOnTwitter()">twitter</ion-button>
-<ion-button color="medium" (click)="SharebyEmail()">email</ion-button>
-<ion-button color="tertiary" (click)="ShareOnFacebook()">facebook</ion-button>
-<ion-button color="success" (click)="SharewithWhatsApp()">whatsapp</ion-button>
+  <ion-button color="success" (click)="SharewithWhatsApp()">share on whatsapp</ion-button>
+  <ion-button color="tertiary" (click)="ShareOnFacebook()">share on facebook</ion-button>
+  <ion-button color="light" (click)="ShareOnTwitter()">share on twitter</ion-button>
+  <ion-button color="medium" (click)="SharebyEmail()">share on email</ion-button>
+  <div class="backbutton">
+    <ion-button color="warning" (click)="goback()">back</ion-button>
+    <ion-button color="danger" (click)="closefunction()">close</ion-button>
+  </div>
 </ion-content>

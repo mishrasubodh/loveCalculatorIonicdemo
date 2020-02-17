@@ -296,3 +296,12 @@ ion-content{
    --background-size: 100%;
     --background-repeat: no-repeat;
 }
+.alert-wrapper.sc-ion-alert-md {
+  border-radius: 4px;
+  background-color:#F35E5D;
+  }
+  .alert-button-inner.sc-ion-alert-md {
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: blue;
+}
