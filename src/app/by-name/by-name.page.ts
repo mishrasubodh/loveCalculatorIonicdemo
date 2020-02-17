@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
 import { NavController } from '@ionic/angular';
-import {ModalPage} from '../modal/modal.page'
 import {SharedService}from '../services/shared.service'
 @Component({
   selector: 'app-by-name',

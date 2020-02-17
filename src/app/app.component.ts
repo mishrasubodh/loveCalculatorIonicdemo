@@ -23,7 +23,7 @@ export class AppComponent {
       icon: "md-mail-open"
     },
     {
-      title: "List",
+      title: "LoveQuize",
       url: "/list",
       icon: "list"
     },
@@ -77,7 +77,7 @@ export class AppComponent {
       if (this.router.url == "/message") {
         this.navctrl.navigateRoot("/home");
       } else if (this.router.url == "/by-name") {
-        this.navctrl.back();
+        this.navctrl.navigateRoot('/home')
       } else if (this.router.url == "/by-dob") {
         this.navctrl.back();
       } else if (this.router.url == "/byphoto") {
@@ -87,7 +87,7 @@ export class AppComponent {
       } else if (this.router.url == "/social-shair") {
         this.navctrl.back();
       } else if (this.router.url == "/modal") {
-        this.navctrl.back();
+        this.navctrl.navigateRoot("/home");
       } else if (this.router.url == "/home") {
         this.count++;
         if (this.count === 1) {
