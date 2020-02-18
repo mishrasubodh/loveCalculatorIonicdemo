@@ -36,7 +36,7 @@
           </div>
         </ion-card-content>
       </ng-container>
-      <ion-button color="primary" [ngStyle]="{'float': 'right'}" *ngIf="activeQuest == i" (click)="next()">{{ questions.length-1 == i ? 'Submit' : 'Next' }}</ion-button>
+      <ion-button color="tertiary" [ngStyle]="{'float': 'right'}" *ngIf="activeQuest == i" (click)="next()">{{ questions.length-1 == i ? 'Submit' : 'Next' }}</ion-button>
     </ion-card>
   </div>
 </ion-content>

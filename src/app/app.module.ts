@@ -29,7 +29,7 @@ import { Screenshot } from '@ionic-native/screenshot/ngx';
      File,
 Screenshot,
      Camera,
-     FileTransfer,
+   
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

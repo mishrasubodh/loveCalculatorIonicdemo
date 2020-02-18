@@ -25,7 +25,7 @@ export class ModalPage implements OnInit {
   public behaveService :SharedService,
   private screenshot:Screenshot,
   private file: File,
-  private transfer: FileTransfer
+ 
   
   ) {
 this.behaveService.data.subscribe(data=>{
