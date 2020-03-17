@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./history.page.scss'],
 })
 export class HistoryPage implements OnInit {
+  
   historydata=[]
   constructor() {
  this.historydata = JSON.parse(localStorage.getItem('session'));
     console.log(this.historydata,'onsearchpage')
-   }
+   
+   
+  }
    deletedata(curentdata){
       console.log(this.historydata,'onsearchpage')
      console.log(curentdata)
@@ -37,4 +40,6 @@ export class HistoryPage implements OnInit {
 			   
 		   }
   }
+
+  
 }

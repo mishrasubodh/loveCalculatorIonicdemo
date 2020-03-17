@@ -5,6 +5,19 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { File } from "@ionic-native/file/ngx";
 import { NavController } from "@ionic/angular";
+import * as firebase from 'firebase';
+const config = {
+  apiKey: "AIzaSyA0qXTFAWHRUKkP8kYjFSJcUW-KC0kLkis",
+  authDomain: "buysell-f70a7.firebaseapp.com",
+  databaseURL: "https://buysell-f70a7.firebaseio.com",
+  projectId: "buysell-f70a7",
+  storageBucket: "buysell-f70a7.appspot.com",
+  messagingSenderId: "163363424062",
+  appId: "1:163363424062:web:035651d5751428518d8e6f",
+  measurementId: "G-FWCG1B9W4M"
+};
+
+
 @Component({
   selector: "app-root",
   templateUrl: "app.component.html",
@@ -53,6 +66,7 @@ export class AppComponent {
       this.splashScreen.hide();
       this.checkDirectory();
     });
+    firebase.initializeApp(config);
   }
 
   async checkDirectory() {

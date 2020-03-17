@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import * as firebase from 'Firebase';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +14,8 @@ export class SharedService {
   updatedDataSelection(data) {
     this.dataSource.next(data);
     this.SaveDataToLocalStorage(data)
+    let newInfo = firebase.database().ref('lovecalcyData/').push();
+    newInfo.set(data);
   }
 
  updateImageData(data) {

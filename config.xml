@@ -107,5 +107,5 @@
     <allow-navigation href="http://localhost:8101" sessionid="36b0ae5b" />
     <allow-navigation href="http://localhost:8100" sessionid="f9424063" />
     <plugin name="cordova-plugin-file" spec="^6.0.2" />
-    <engine name="android" spec="7.1.4" />
+    <engine name="android" spec="^7.1.4" />
 </widget>
